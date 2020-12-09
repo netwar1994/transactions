@@ -47,4 +47,7 @@ func main()  {
 
 	card.Info(&master)
 	fmt.Println("Amount of transaction for MCC 5411, 5812:", card.SumByMMC(transactions, mccList))
+
+	category := card.TranslateMCC(master.Transactions[1].MCC)
+	fmt.Println(category)
 }
